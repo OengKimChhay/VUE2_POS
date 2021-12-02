@@ -1,11 +1,11 @@
-FROM node:lts-alpine as build-stage
+FROM node:lts-alpine
 
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 RUN npm install @vue/cli@4.5.14 -g
 
-COPY . .
+COPY ./dist /app
 RUN npm run build
 EXPOSE 80
 
