@@ -1,12 +1,12 @@
 <template>
 	<div>
 		<h1 class="md-title">Report POS</h1>
-			<form @submit.prevent="Search">
-				<input v-model="search.receipt_number" type="text">
-				<input v-model="search.from" type="date" placeholder="from">
-
-				<input v-model="search.to" type="date">
-				<button type="submit">submit</button>
+			<form @submit.prevent="Search" style="display:flex; width:20%;">
+				<md-field>
+					<label>Reciept Number</label>
+					<md-input v-model="search.receipt_number"></md-input>
+				</md-field>
+				<md-button class="md-dense md-raised md-primary" type="submit">search</md-button>
 			</form>
 		<div v-if="this.Allreports.total > 0">
 			<md-card md-with-hover class="report-card" v-for="report in this.Allreports.data" :key="report.id">
@@ -152,13 +152,10 @@ export default {
 			if(this.search.receipt_number != ""){
 				this.getReport(this.search.receipt_number);
 			}
-			if(this.search.from !="" && this.search.to !=""){
-				this.getReport(this.search.from,this.search.to);
-			}
 		}
     },
     mounted(){
-		this.getReport(this.search.receipt_number,this.search.from,this.search.to);
+		this.getReport(this.search.receipt_number);
 		this.getAllProduct(); 
     },
 }
