@@ -31,17 +31,9 @@ const report = {
         },
     },
     actions:{
-        getReport({state,commit},receipt_number,from,to){ 
+        getReport({state,commit},receipt_number){ 
             if(receipt_number != ""){
                 http.get("ui/pos/listing?receipt_number="+receipt_number).then((response)=>{
-                    state.Errors = "";
-                    commit("GET_REPORT",response.data); 
-                })
-                .catch((error)=>{ 
-                    console.log(error.response);
-                })
-            }else if(from !="" && to !=""){
-                http.get("ui/pos/listing?from="+from+"&to="+to).then((response)=>{
                     state.Errors = "";
                     commit("GET_REPORT",response.data); 
                 })
