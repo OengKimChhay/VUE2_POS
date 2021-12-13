@@ -9,7 +9,7 @@ const mixin =  {
             usertype: localStorage.getItem('usertype'),
             userid: localStorage.getItem('userid'),
             userimage: localStorage.getItem('userimage'),
-            ImageURL: "http://1128.199.114.225:1027/images"
+            ImageURL: "http://188.166.241.188:1027/images"
         }
     },
     methods: {
