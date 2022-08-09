@@ -11,10 +11,10 @@
 <script>
 export default {
     name:'Category',
-    props: ['category'], //'category' is a prop name in parent component
+    props: ['category'], //'category' is a prop name in parent component // we use prop(pass data from parent-compo to child-compo)
     methods:{
         passCatID(catID){
-            this.$emit('PassCatID',catID);
+            this.$emit('PassCatID',catID); // $emit(pass data from child-compo to parent-compo)
         }
     },
 }

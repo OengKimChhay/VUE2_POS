@@ -467,6 +467,7 @@ export default {
 		right: 17px;
 	}
 	
+	
 	/*--------------------------side-footer------------------------------*/
 	
 	.sidebar-footer {

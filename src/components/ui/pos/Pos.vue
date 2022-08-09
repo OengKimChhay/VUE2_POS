@@ -134,7 +134,7 @@
                     <md-button class="md-raised" style="background: tomato; color: white;"  v-if="showProList || showTable || showPromoTable" @click="Back" size="sm"><b-icon icon="chevron-double-left"></b-icon> Back</md-button>
                 </div>
 
-                <!-- we use prop(pass from parent to child) and $emit(pass child to parent) to pass data each other child~parent -->
+                <!-- we use prop(pass data from parent-compo to child-compo) and $emit(pass data from child-compo to parent-compo) -->
                 <TableOrder v-if="showTable" :table="this.Alltables" @passTable="selectTab"></TableOrder>
                 <!-- ------------------show category list--------------- -->
                 <Category v-if="showCatList" :category="this.Allcategories" @PassCatID="selectCat"></Category> 

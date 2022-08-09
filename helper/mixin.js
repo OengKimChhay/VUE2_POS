@@ -9,7 +9,7 @@ const mixin =  {
             usertype: localStorage.getItem('usertype'),
             userid: localStorage.getItem('userid'),
             userimage: localStorage.getItem('userimage'),
-            ImageURL: "http://188.166.241.188:1027/images"
+            ImageURL: "http://127.0.0.1:8000/images"
         }
     },
     methods: {
@@ -21,7 +21,7 @@ const mixin =  {
         // for pages reload next previous
         pageReload(){
             return window.location.reload();
-        }, 
+        },
         previousPage(){
             return router.go(-1);
         },
@@ -33,4 +33,4 @@ const mixin =  {
 };
 export default mixin;
 //  vue mixin is an gloubal file helper to provide deverlper easy to use just import it to main.js root file
-//  then you can use function from this mixin file wherever you want ;)
+//  then you can use function or data from this mixin file wherever you want ;)

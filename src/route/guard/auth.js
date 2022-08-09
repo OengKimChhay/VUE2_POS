@@ -8,7 +8,7 @@ export default route.beforeEach((to, from, next) => {
     var checkAuth = store.getters['auth/loggedIn'];
     if(requiresAuth){ //check if each route has requiresAuth:true; and if toke is empty or null 
         if(!checkAuth){
-            next({name: 'Login'}); 
+            next({name: 'Login'});
         }else{
             next();
         }

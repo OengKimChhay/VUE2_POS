@@ -14,6 +14,7 @@ import "bootstrap/dist/js/bootstrap.min";
 import "bootstrap-vue/dist/bootstrap-vue.css";  //this is for vue bootstrap
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons) //for vue icon
+
 // ------vue marteria-------------
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
