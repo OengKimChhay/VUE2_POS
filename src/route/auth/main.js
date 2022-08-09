@@ -1,7 +1,7 @@
 
 import Layout from '@/components/layout/Layout.vue';
 // ========== user ===============
-import UserList from '@/components/auth/UserList.vue'
+import UserList from '@/components/auth/UserList.vue';
 import UserRegister from '@/components/auth/UserRegister.vue';
 import UserLogin from '@/components/auth/UserLogin.vue';
 // ========== dsahboard==========

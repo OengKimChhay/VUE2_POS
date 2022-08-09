@@ -1,5 +1,5 @@
 <template>
-  <div  class="wrappe-menu">
+  <div class="wrappe-menu">
       <p v-for="tab in table" :key="tab.id" class="table-name" @click="passTable(tab)">{{tab.name}}</p>
   </div>
 </template>
@@ -13,7 +13,6 @@ export default {
             this.$emit('passTable',table);
         }
     }
-
 }
 </script>
 
